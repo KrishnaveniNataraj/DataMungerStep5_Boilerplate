@@ -5,16 +5,66 @@ package com.stackroute.datamunger.query.parser;
  * */
 public class AggregateFunction {
 
-	public String getFunction() {
-		// TODO Auto-generated method stub
-		return null;
+	private String field;
+
+	private String function;
+
+	public AggregateFunction(String field, String function) {
+		super();
+		this.field = field;
+		this.function = function;
 	}
 
 	public String getField() {
-		// TODO Auto-generated method stub
-		return null;
+		return field;
 	}
-	
-	
+
+	public void setField(String field) {
+		this.field = field;
+	}
+
+	public String getFunction() {
+		return function;
+	}
+
+	public void setFunction(String function) {
+		this.function = function;
+	}
+
+	@Override
+	public String toString() {
+		return "AggregateFunction [field=" + field + ", function=" + function + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((field == null) ? 0 : field.hashCode());
+		result = prime * result + ((function == null) ? 0 : function.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AggregateFunction other = (AggregateFunction) obj;
+		if (field == null) {
+			if (other.field != null)
+				return false;
+		} else if (!field.equals(other.field))
+			return false;
+		if (function == null) {
+			if (other.function != null)
+				return false;
+		} else if (!function.equals(other.function))
+			return false;
+		return true;
+	}
 
 }

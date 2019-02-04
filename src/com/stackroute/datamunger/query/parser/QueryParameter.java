@@ -7,45 +7,90 @@ import java.util.List;
  * fields, Query Type
  * */
 public class QueryParameter {
+	
+	String queryString;
+	String fileName;
+	String baseQuery;
+	List<Restriction> restrictions;
+	List<String> fields;
+//	QUERY_TYPE -> String
+//	where condition /filter -> will decide ( it is not String type)
+	List<String> logicalOperators;
+	List<AggregateFunction> aggregateFunctions;
+	List<String> orderByFields;
+	List<String> groupByFields;
+
 
 	public String getFileName() {
-		// TODO Auto-generated method stub
-		return null;
+		return fileName;
 	}
 
-	public List<String> getFields() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getQueryString() {
+		return queryString;
 	}
 
-	public List<Restriction> getRestrictions() {
-		// TODO Auto-generated method stub
-		return null;
+	public void setQueryString(String queryString) {
+		this.queryString = queryString;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public void setBaseQuery(String baseQuery) {
+		this.baseQuery = baseQuery;
+	}
+
+	public void setRestrictions(List<Restriction> restrictions) {
+		this.restrictions = restrictions;
+	}
+
+	public void setFields(List<String> fields) {
+		this.fields = fields;
+	}
+
+	public void setLogicalOperators(List<String> logicalOperators) {
+		this.logicalOperators = logicalOperators;
+	}
+
+	public void setAggregateFunctions(List<AggregateFunction> aggregateFunctions) {
+		this.aggregateFunctions = aggregateFunctions;
+	}
+
+	public void setOrderByFields(List<String> orderByFields) {
+		this.orderByFields = orderByFields;
+	}
+
+	public void setGroupByFields(List<String> groupByFields) {
+		this.groupByFields = groupByFields;
 	}
 
 	public String getBaseQuery() {
-		// TODO Auto-generated method stub
-		return null;
+		return baseQuery;
 	}
 
-	public List<AggregateFunction> getAggregateFunctions() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Restriction> getRestrictions() {
+		return restrictions;
 	}
 
 	public List<String> getLogicalOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		return logicalOperators;
+	}
+
+	public List<String> getFields() {
+		return fields;
+	}
+
+	public List<AggregateFunction> getAggregateFunctions() {
+		return aggregateFunctions;
 	}
 
 	public List<String> getGroupByFields() {
-		// TODO Auto-generated method stub
-		return null;
+		return groupByFields;
 	}
 
 	public List<String> getOrderByFields() {
-		// TODO Auto-generated method stub
-		return null;
+		return orderByFields;
 	}
 
 	public String getQUERY_TYPE() {
